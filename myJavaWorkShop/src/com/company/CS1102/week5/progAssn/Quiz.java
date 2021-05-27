@@ -3,7 +3,7 @@ package com.company.CS1102.week5.progAssn;
 public class Quiz {
 
     public static void main(String[] args) {
-
+        /*
         Question question1 = new MultipleChoiceQuestion(
                 "What is a quiz?\n",
                 "A. a test of knowledge, especially a brief informal test given to students\n",
@@ -24,12 +24,21 @@ public class Quiz {
         );
         question3.check();
 
-
-        Question question = new TrueFalseQuestion("What is a quiz?\n", "TRUE");
+    */
+        Question question = new TrueFalseQuestion("In an instance method or a constructor, \"this\" is a reference to the current object.\n", "TRUE");
         question.check();
-
         Question.showResults();
 
+        Question question2 = new TrueFalseQuestion("Garbage Collection is manual process.\n",
+                                                      "FALSE");
+        question2.check();
+        Question.showResults();
+
+        question = new MultipleChoiceQuestion("Which of the following is not a Java features?",
+                "Dynamic","Architecture Neutral","Use of pointers",
+                "Object-oriented","interface", "c");
+        question.check();
+        MultipleChoiceQuestion.showResults();
     }
 
 
