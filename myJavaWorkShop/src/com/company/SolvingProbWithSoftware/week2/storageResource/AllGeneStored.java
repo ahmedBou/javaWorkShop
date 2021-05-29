@@ -71,20 +71,24 @@ public class AllGeneStored {
             // Add that gene to geneList
             geneList.add(currentGene);
             //Set start index to just past the end of the gene
-            startIndex = dna.indexOf(currentGene, startIndex);
-            currentGene.length();
+            startIndex = dna.indexOf(currentGene, startIndex)+ currentGene.length();
+
         }
         return geneList;
     }
 
-    public void testOnGene(String dna){
-        System.out.println("Testing getAllGenes on");
+    public void testOn(String dna){
+        System.out.println("Testing getAllGenes on "+dna);
         StorageResource genes = getAllGenes(dna);
         for(String gene: genes.data()){
             System.out.println(gene);
         }
+    }
 
-
+    public static void main(String[] args) {
+        AllGeneStored gene = new AllGeneStored();
+        gene.testOn("ATGATCTAATTTATGCTGCAACGGTGAAGA");
+        gene.testOn("ATGAaaTCATAAGAAGATAATAGAGGGCCATGTAA");
     }
 
 }

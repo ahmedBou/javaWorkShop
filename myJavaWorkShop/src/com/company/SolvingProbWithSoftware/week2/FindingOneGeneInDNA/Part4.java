@@ -1,7 +1,7 @@
 package com.company.SolvingProbWithSoftware.week2.FindingOneGeneInDNA;
 
 
-/*
+
 import edu.duke.*;
 
 
@@ -28,4 +28,3 @@ public class Part4 {
 
 }
 
- */
