@@ -1,8 +1,9 @@
-package com.company.hakerrank.javaLoop2;
+package com.company.hakerrank;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigInteger;
 
 public class PrimeNumber {
     public static void main(String[] args) throws IOException {
@@ -11,10 +12,6 @@ public class PrimeNumber {
         String n = bufferedReader.readLine();
 
         bufferedReader.close();
-        int t = Integer.valueOf(n);
-        if (t%2==1 && t/t == 1){
-            System.out.println("prime");
-        }
-
+        System.out.println(new BigInteger(n).isProbablePrime(1) ? "prime" : "not prime");
     }
 }
